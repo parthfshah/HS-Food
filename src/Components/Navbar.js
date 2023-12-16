@@ -1,41 +1,99 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react"
+import { Link } from "react-router-dom"
+import {
+	ChakraProvider,
+	Flex,
+	Box,
+	Image,
+	Link as ChakraLink,
+	Button,
+	Input,
+	InputGroup,
+	InputRightElement,
+} from "@chakra-ui/react"
 
 const Navbar = () => {
-  return (
-  <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <a name="top"></a>
-        <div className="container-fluid">
-          <img src="logo.jpg" alt="logo" className='image' />
-          <Link className="navbar-brand" to="#">HS Food</Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="#">Home</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="#">About</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="#">Menu</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="#">Contact</Link>
-              </li>
-            </ul>
-            <form className="d-flex" role="search">
-              <input className="form-control me-2 w-100" type="search" placeholder="Search Here..." aria-label="Search" />
-              <button className="btn btn-outline-primary w-25" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-    </>
-  )
+	return (
+		<ChakraProvider>
+			<Flex as="nav" bg="teal.500" p="4">
+				<Box>
+					{/* Logo and Brand Name */}
+					<Link
+						to="/"
+						style={{
+							color: "white",
+							textDecoration: "none",
+							display: "flex",
+							alignItems: "center",
+						}}
+					>
+						<Image
+							src="/logo.jpg"
+							alt="logo"
+							boxSize="40px"
+							marginRight="2"
+						/>
+						<span>HS Food</span>
+					</Link>
+				</Box>
+
+				{/* Navbar Links */}
+				<Box ml="auto">
+					<ChakraLink
+						to="/"
+						color="white"
+						marginRight="4"
+						as={Link}
+					>
+						Home
+					</ChakraLink>
+					<ChakraLink
+						to="/about"
+						color="white"
+						marginRight="4"
+						as={Link}
+					>
+						About
+					</ChakraLink>
+					<ChakraLink
+						to="/menu"
+						color="white"
+						marginRight="4"
+						as={Link}
+					>
+						Menu
+					</ChakraLink>
+					<ChakraLink
+						to="/contact"
+						color="white"
+						marginRight="4"
+						as={Link}
+					>
+						Contact
+					</ChakraLink>
+				</Box>
+
+				{/* Search Form */}
+				<form className="d-flex">
+					<InputGroup size="md">
+						<Input
+							type="search"
+							placeholder="Search Here..."
+						/>
+						<InputRightElement width="4.5rem">
+							<Button
+								h="1.75rem"
+								size="sm"
+								colorScheme="teal"
+							>
+								Search
+							</Button>
+						</InputRightElement>
+					</InputGroup>
+				</form>
+			</Flex>
+		</ChakraProvider>
+	)
 }
 
 export default Navbar
