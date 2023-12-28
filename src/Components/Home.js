@@ -15,6 +15,8 @@ import {
 } from "react-icons/fa"
 import { motion } from "framer-motion"
 import menuItems from "../Store/menu" // Import the menu items
+import SplitComponent from "./Split"
+import Products from "./Products"
 
 const MotionBox = motion(Box)
 
@@ -30,6 +32,8 @@ const Home = () => {
 
 	return (
 		<>
+			<SplitComponent />
+			<Products />
 			<Container maxW="container.xl" mt={8}>
 				<Flex wrap="wrap" justify="center">
 					{menuItems.map((item) => (
