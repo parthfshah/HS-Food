@@ -8,6 +8,9 @@ import {
 	Image,
 	Center,
 } from "@chakra-ui/react"
+// ... (imports)
+
+import ReactFlipCard from "reactjs-flip-card"
 
 const ProductCard = ({
 	image,
@@ -15,63 +18,41 @@ const ProductCard = ({
 	description,
 	hoverDescription,
 }) => {
-	const [isHovered, setIsHovered] =
-		React.useState(false)
-
 	return (
-		<Box
-			maxW="300px"
-			borderWidth="1px"
-			borderRadius="lg"
-			overflow="hidden"
-			m={4}
-			position="relative"
-			_hover={{
-				transform: "rotateY(180deg)",
-				boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-			}}
-			transition="transform 0.6s ease-in-out, box-shadow 0.3s ease-in-out"
+		<ReactFlipCard // Use ReactFlipCard for card flipping
+			flipDirection="horizontal" // Specify flip direction
+			flipOnHover
 		>
-			<Box className="card-inner">
-				<Box className="card-front">
-					<Image
-						src={image}
-						alt={title}
-						h="200px"
-						objectFit="cover"
-					/>
-					<Box p={4}>
-						<Heading fontSize="xl" mb={2}>
-							{title}
-						</Heading>
-						<Text>{description}</Text>
-					</Box>
-				</Box>
-				<Box
-					className="card-back"
-					transform={`rotateY(180deg)${
-						isHovered ? " rotateY(180deg)" : ""
-					}`}
-					style={{
-						backfaceVisibility: "hidden",
-						transformStyle: "preserve-3d",
-						position: "absolute",
-						top: "0",
-						left: "0",
-						right: "0",
-						bottom: "0",
-					}}
-					onMouseEnter={() => setIsHovered(true)}
-					onMouseLeave={() => setIsHovered(false)}
-				>
-					<Box p={4}>
-						<Text>
-							{isHovered ? hoverDescription : ""}
-						</Text>
-					</Box>
+			<Box
+				// ... (retain existing styles and layout for the front card)
+				className="card-front"
+				// ...
+			>
+				<Image
+					src={image}
+					alt={title}
+					h="200px"
+					objectFit="cover"
+				/>
+				<Box p={4}>
+					<Heading fontSize="xl" mb={2}>
+						{title}
+					</Heading>
+					<Text>{description}</Text>
 				</Box>
 			</Box>
-		</Box>
+			<Box
+				// ... (retain existing styles and layout for the back card)
+				className="card-back"
+				// ...
+			>
+				<Box p={4}>
+					<Center h="100%">
+						<Text>{hoverDescription}</Text>
+					</Center>
+				</Box>
+			</Box>
+		</ReactFlipCard>
 	)
 }
 
@@ -79,7 +60,7 @@ const Products = () => {
 	const productsData = [
 		{
 			title: "French Fries",
-			image: "path/to/french-fries.jpg",
+			image: "/logo.jpg",
 			description: "Fries are my spirit animal.",
 			hoverDescription: "French Fries",
 		},

@@ -1,99 +1,192 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import {
+	useColorMode,
+	useColorModeValue,
+	useDisclosure,
+	chakra,
 	Flex,
+	IconButton,
+	VStack,
+	CloseButton,
+	Button,
+	HStack,
+	Link as ChakraLink,
+	Stack,
+	SimpleGrid,
+	Icon,
 	Box,
 	Image,
-	Link as ChakraLink,
-	Button,
-	Input,
-	InputGroup,
-	InputRightElement,
-	ChakraProvider,
+	Popover,
+	PopoverTrigger,
+	PopoverContent,
+	VisuallyHidden,
 } from "@chakra-ui/react"
 
+import { FaMoon, FaSun } from "react-icons/fa"
+import {
+	AiFillHome,
+	AiOutlineInbox,
+	AiOutlineMenu,
+} from "react-icons/ai"
+import { BsFillCameraVideoFill } from "react-icons/bs"
+import { IoIosArrowDown } from "react-icons/io"
+
 const Navbar = () => {
+	const bg = useColorModeValue(
+		"white",
+		"gray.800"
+	)
+	const mobileNav = useDisclosure()
 	return (
-		<Flex
-			as="nav"
-			bg="teal.500"
-			p="4"
-			justify="space-between"
-			align="center"
-		>
-			{/* Navbar Links */}
-			<Box>
-				<ChakraLink
-					as={Link}
-					to="/"
-					color="white"
-					marginRight="4"
-				>
-					Home
-				</ChakraLink>
-				<ChakraLink
-					as={Link}
-					to="/about"
-					color="white"
-					marginRight="4"
-				>
-					About
-				</ChakraLink>
-				<ChakraLink
-					as={Link}
-					to="/menu"
-					color="white"
-					marginRight="4"
-				>
-					Menu
-				</ChakraLink>
-				<ChakraLink
-					as={Link}
-					to="/contact"
-					color="white"
-					marginRight="4"
-				>
-					Contact
-				</ChakraLink>
-			</Box>
-
-			{/* Logo and Brand Name */}
-			<ChakraLink
-				as={Link}
-				to="/"
-				color="white"
-				textDecoration="none"
-				display="flex"
-				alignItems="center"
+		<React.Fragment>
+			<chakra.header
+				bg={bg}
+				w="full"
+				px={{
+					base: 2,
+					sm: 4,
+				}}
+				py={4}
+				shadow="md"
 			>
-				<Image
-					src="/logo.jpg"
-					alt="logo"
-					boxSize="40px"
-					marginRight="2"
-				/>
-				<span>HS Food</span>
-			</ChakraLink>
-
-			{/* Search Form */}
-			<form className="d-flex">
-				<InputGroup size="md">
-					<Input
-						type="search"
-						placeholder="Search Here..."
-					/>
-					<InputRightElement width="4.5rem">
-						<Button
-							h="1.75rem"
-							size="sm"
-							colorScheme="teal"
+				<Flex
+					alignItems="center"
+					justifyContent="space-between"
+					mx="auto"
+				>
+					<Flex>
+						<chakra.a
+							href="/"
+							title="Home Page"
+							display="flex"
+							alignItems="center"
 						>
-							Search
+							<VisuallyHidden></VisuallyHidden>
+						</chakra.a>
+						<chakra.h1
+							fontSize="xl"
+							fontWeight="medium"
+							ml="2"
+						>
+							<ChakraLink
+								as={Link}
+								to="/"
+								color="white"
+								textDecoration="none"
+								display="flex"
+								alignItems="center"
+							>
+								<Image
+									src="/logo.jpg"
+									alt="logo"
+									boxSize="100px"
+									marginRight="2"
+								/>
+								<span>HS Food</span>
+							</ChakraLink>
+						</chakra.h1>
+					</Flex>
+					<HStack
+						display="flex"
+						alignItems="center"
+						spacing={1}
+					>
+						<HStack
+							spacing={1}
+							mr={1}
+							color="brand.500"
+							display={{
+								base: "none",
+								md: "inline-flex",
+							}}
+						>
+							<Button variant="ghost">
+								Features
+							</Button>
+							<Button variant="ghost">
+								Pricing
+							</Button>
+							<Button variant="ghost">
+								Blog
+							</Button>
+							<Button variant="ghost">
+								Company
+							</Button>
+							<Button variant="ghost">
+								Sign in
+							</Button>
+						</HStack>
+						<Button colorScheme="brand" size="sm">
+							Get Started
 						</Button>
-					</InputRightElement>
-				</InputGroup>
-			</form>
-		</Flex>
+						<Box
+							display={{
+								base: "inline-flex",
+								md: "none",
+							}}
+						>
+							<IconButton
+								display={{
+									base: "flex",
+									md: "none",
+								}}
+								aria-label="Open menu"
+								fontSize="20px"
+								color="gray.800"
+								_dark={{
+									color: "inherit",
+								}}
+								variant="ghost"
+								icon={<AiOutlineMenu />}
+								onClick={mobileNav.onOpen}
+							/>
+
+							<VStack
+								pos="absolute"
+								top={0}
+								left={0}
+								right={0}
+								display={
+									mobileNav.isOpen
+										? "flex"
+										: "none"
+								}
+								flexDirection="column"
+								p={2}
+								pb={4}
+								m={2}
+								bg={bg}
+								spacing={3}
+								rounded="sm"
+								shadow="sm"
+							>
+								<CloseButton
+									aria-label="Close menu"
+									onClick={mobileNav.onClose}
+								/>
+
+								<Button w="full" variant="ghost">
+									Features
+								</Button>
+								<Button w="full" variant="ghost">
+									Pricing
+								</Button>
+								<Button w="full" variant="ghost">
+									Blog
+								</Button>
+								<Button w="full" variant="ghost">
+									Company
+								</Button>
+								<Button w="full" variant="ghost">
+									Sign in
+								</Button>
+							</VStack>
+						</Box>
+					</HStack>
+				</Flex>
+			</chakra.header>
+		</React.Fragment>
 	)
 }
 
