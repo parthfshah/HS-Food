@@ -53,7 +53,7 @@ const Home = () => {
 							animate="visible"
 							whileHover="hover"
 							whileTap={{ scale: 0.95 }}
-							transition={{ duration: 0.5 }}
+							transition={{ duration: 0.55 }}
 							_hover={itemHoverVariants}
 						>
 							<Image
