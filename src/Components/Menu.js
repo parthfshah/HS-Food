@@ -4,13 +4,21 @@ const Menu = () => {
 	return (
 		<div>
 			<h2>Menu</h2>
-			{/* You can embed a PDF viewer or use an iframe to display the PDF */}
-			<iframe
-				title="Menu PDF"
-				src="/menu.pdf"
+			{/* Use the object tag to embed the PDF */}
+			<object
+				data="/menu.pdf"
+				type="application/pdf"
 				width="100%"
 				height="500px"
-			></iframe>
+			>
+				<p>
+					It appears you don't have a PDF plugin
+					for this browser. You can{" "}
+					<a href="/menu.pdf">
+						click here to download the PDF file.
+					</a>
+				</p>
+			</object>
 		</div>
 	)
 }

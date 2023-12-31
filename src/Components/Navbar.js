@@ -193,21 +193,71 @@ const Navbar = () => {
 									onClick={mobileNav.onClose}
 								/>
 
-								<Button w="full" variant="ghost">
-									Features
-								</Button>
-								<Button w="full" variant="ghost">
-									Pricing
-								</Button>
-								<Button w="full" variant="ghost">
-									Blog
-								</Button>
-								<Button w="full" variant="ghost">
-									Company
-								</Button>
-								<Button w="full" variant="ghost">
-									Sign in
-								</Button>
+								<Link
+									to="/"
+									style={{
+										textDecoration: "none",
+									}}
+								>
+									<Button
+										w="full"
+										variant="ghost"
+									>
+										Home
+									</Button>
+								</Link>
+								<Link
+									to="/about"
+									style={{
+										textDecoration: "none",
+									}}
+								>
+									<Button
+										w="full"
+										variant="ghost"
+									>
+										About
+									</Button>
+								</Link>
+								<Link
+									to="/menu"
+									style={{
+										textDecoration: "none",
+									}}
+								>
+									<Button
+										w="full"
+										variant="ghost"
+									>
+										Menu
+									</Button>
+								</Link>
+								<Link
+									to="/gallery"
+									style={{
+										textDecoration: "none",
+									}}
+								>
+									<Button
+										w="full"
+										variant="ghost"
+									>
+										Gallery
+									</Button>
+								</Link>
+								<Link
+									to="/contact"
+									style={{
+										textDecoration: "none",
+									}}
+								>
+									<Button
+										w="full"
+										variant="ghost"
+									>
+										Contact
+									</Button>
+								</Link>
 							</VStack>
 						</Box>
 					</HStack>
