@@ -34,7 +34,7 @@ const Home = () => {
 		<>
 			<SplitComponent />
 			<Products />
-			<Container maxW="container.xl" mt={8}>
+			{/* <Container maxW="container.xl" mt={8}>
 				<Flex wrap="wrap" justify="center">
 					{menuItems.map((item) => (
 						<MotionBox
@@ -98,7 +98,7 @@ const Home = () => {
 						color="blue.500"
 					/>
 				</Link>
-			</Container>
+			</Container> */}
 		</>
 	)
 }

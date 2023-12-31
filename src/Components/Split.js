@@ -22,15 +22,11 @@ const SplitComponent = () => {
 		>
 			<Flex bg="brand.400">
 				<Image
-					src="https://static.vecteezy.com/system/resources/previews/000/661/832/non_2x/indian-food-vada-pav-with-mint-sauce-vector.jpg"
+					src="/products/5LSandwich.jpg"
 					alt="3 women looking at a laptop"
 					fit="cover"
-					w="full"
-					h={{
-						base: 64,
-						md: "full",
-					}}
-					bg="gray.100"
+					maxWidth="100%"
+					height="auto"
 					loading="lazy"
 					opacity={1}
 				/>
@@ -48,6 +44,7 @@ const SplitComponent = () => {
 				zIndex={3}
 			>
 				<chakra.span
+					marginBottom={2}
 					color="brand.600"
 					_dark={{
 						color: "gray.300",
@@ -56,7 +53,8 @@ const SplitComponent = () => {
 					textTransform="uppercase"
 					fontWeight="extrabold"
 				>
-					Enjoy the Flavor of Vadapav at HS Food
+					New product: THE 5 LAYER SANDWICH AT HS
+					FOOD
 				</chakra.span>
 
 				<chakra.p
@@ -72,12 +70,17 @@ const SplitComponent = () => {
 					}}
 					letterSpacing="wider"
 				>
-					HS Food is Ahmedabad's top spot for
-					delicious Vadapav. Our commitment to
-					quality and taste makes us the ultimate
-					destination for Vadapav lovers. Join us
-					for a delightful experience and savor
-					the essence of authentic street food.
+					HS Food stands as Ahmedabad's premier
+					destination for the exquisite 5 Layer
+					Sandwich. Our unwavering dedication to
+					quality and flavor positions us as the
+					go-to place for connoisseurs of this
+					delectable creation. Immerse yourself in
+					a delightful culinary journey and relish
+					the true essence of this exceptional
+					addition to our menu. Discover a
+					symphony of flavors in every bite at HS
+					Food.
 				</chakra.p>
 				<Box
 					as="a"

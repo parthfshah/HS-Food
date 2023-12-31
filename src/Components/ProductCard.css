@@ -1,0 +1,64 @@
+.product-card {
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	padding: 15px;
+	position: relative;
+	transition: all 0.2s ease-in-out;
+	margin: 10px;
+}
+
+.product-card img {
+	display: block;
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+.card-content {
+	position: absolute;
+	bottom: 00%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size: 30px;
+}
+
+.card-content h3 {
+	margin: 0;
+	font-size: 28px; /* Set a larger font size for the title */
+	font-weight: bold;
+	color: #fff; /* Set title color to white */
+}
+
+.card-content p {
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #fff; /* Set text color to white */
+}
+
+.product-card.hovered {
+	background-color: #f8f8f8;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.product-card.hovered .card-content {
+	/* Center content on hover */
+	bottom: 0%;
+}
+
+.product-card.hovered .card-content h3 {
+	/* Example: Make title larger on hover */
+	font-size: 24px;
+}
+
+.product-card.hovered .card-content p {
+	/* Example: Center text on hover */
+	text-align: center;
+}
+
+/* Add your own additional styles for hover animations here */
+.product-card.hovered img {
+	/* Example: Fade out image on hover */
+	opacity: 0.8;
+}

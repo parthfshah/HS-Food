@@ -80,7 +80,8 @@ const Navbar = () => {
 								<Image
 									src="/logo.jpg"
 									alt="logo"
-									boxSize="100px"
+									boxSize="5rem"
+									width={"100%"}
 									marginRight="2"
 								/>
 								<span>HS Food</span>
@@ -102,19 +103,20 @@ const Navbar = () => {
 							}}
 						>
 							<Button variant="ghost">
-								Features
+								About
+							</Button>
+							<Button
+								variant="ghost"
+								as={Link}
+								to="/menu.pdf"
+							>
+								Menu
 							</Button>
 							<Button variant="ghost">
-								Pricing
+								Gallery
 							</Button>
 							<Button variant="ghost">
-								Blog
-							</Button>
-							<Button variant="ghost">
-								Company
-							</Button>
-							<Button variant="ghost">
-								Sign in
+								Contact
 							</Button>
 						</HStack>
 						<Button colorScheme="brand" size="sm">
