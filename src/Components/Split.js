@@ -10,6 +10,7 @@ import {
 	Icon,
 } from "@chakra-ui/react"
 import { FiExternalLink } from "react-icons/fi"
+import { Link } from "react-router-dom"
 
 const SplitComponent = () => {
 	return (
@@ -83,10 +84,8 @@ const SplitComponent = () => {
 					Food.
 				</chakra.p>
 				<Box
-					as="a"
-					href="/menu.pdf" // Replace with the actual path to your PDF file
-					target="_blank" // Open the link in a new tab/window
-					rel="noopener noreferrer" // Recommended for security reasons when using target="_blank"
+					as={Link}
+					to="/menu"
 					rounded="md"
 					shadow="md"
 				>

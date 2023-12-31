@@ -102,22 +102,47 @@ const Navbar = () => {
 								md: "inline-flex",
 							}}
 						>
-							<Button variant="ghost">
-								About
-							</Button>
-							<Button
-								variant="ghost"
-								as={Link}
-								to="/menu.pdf"
+							<Link
+								to="/"
+								style={{ textDecoration: "none" }}
 							>
-								Menu
-							</Button>
-							<Button variant="ghost">
-								Gallery
-							</Button>
-							<Button variant="ghost">
-								Contact
-							</Button>
+								<Button variant="ghost">
+									Home
+								</Button>
+							</Link>
+							<Link
+								to="/about"
+								style={{ textDecoration: "none" }}
+							>
+								<Button variant="ghost">
+									About
+								</Button>
+							</Link>
+							<Link
+								to="/menu"
+								style={{ textDecoration: "none" }}
+							>
+								<Button variant="ghost">
+									Menu
+								</Button>
+							</Link>
+
+							<Link
+								to="/gallery"
+								style={{ textDecoration: "none" }}
+							>
+								<Button variant="ghost">
+									Gallery
+								</Button>
+							</Link>
+							<Link
+								to="/contact"
+								style={{ textDecoration: "none" }}
+							>
+								<Button variant="ghost">
+									Contact
+								</Button>
+							</Link>
 						</HStack>
 						<Button colorScheme="brand" size="sm">
 							Get Started
