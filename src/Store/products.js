@@ -6,18 +6,66 @@ const productsData = [
 		hoverDescription:
 			"Fries are my spirit animal.",
 		Description: "French Fries",
+		subProducts: [
+			{
+				title: "VadaPav 1",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+			{
+				title: "VadaPav 2",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+		],
 	},
 	{
 		title: "Vadapav",
 		image: "/products/Vadapav.jpg",
 		hoverDescription: "Ek Dum Mumbai Style",
 		Description: "Vadapav",
+		subProducts: [
+			{
+				title: "VadaPav 1",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+			{
+				title: "VadaPav 2",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+		],
 	},
 	{
 		title: "Burger",
 		image: "/products/Burger.jpg",
 		hoverDescription: "Are Yaar Burger Khila Do",
 		Description: "Burger",
+		subProducts: [
+			{
+				title: "VadaPav 1",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+			{
+				title: "VadaPav 2",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+		],
 	},
 	{
 		title: "Sandwich",
@@ -25,12 +73,44 @@ const productsData = [
 		hoverDescription:
 			"Khane Ka Shortcut Apna Sandwich",
 		Description: "Sandwich",
+		subProducts: [
+			{
+				title: "VadaPav 1",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+			{
+				title: "VadaPav 2",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+		],
 	},
 	{
 		title: "Pizza",
 		image: "/products/Pizza.jpg",
 		hoverDescription: "Aao Pizza Khilaye",
 		Description: "Pizza",
+		subProducts: [
+			{
+				title: "VadaPav 1",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+			{
+				title: "VadaPav 2",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+		],
 	},
 	{
 		title: "Garlic Bread",
@@ -38,6 +118,22 @@ const productsData = [
 		hoverDescription:
 			"Pizza ka chhota bhai Garlic Bread",
 		Description: "Garlic Bread",
+		subProducts: [
+			{
+				title: "VadaPav 1",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+			{
+				title: "VadaPav 2",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+		],
 	},
 	{
 		title: "Maska Bun",
@@ -45,12 +141,44 @@ const productsData = [
 		hoverDescription:
 			"Kisi ko manaye Maska bun ke saath",
 		Description: "Maska Bun",
+		subProducts: [
+			{
+				title: "VadaPav 1",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+			{
+				title: "VadaPav 2",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+		],
 	},
 	{
 		title: "Chhole Pav",
 		image: "/products/ChholePav.jpg",
 		hoverDescription: "Chhole Pav",
 		Description: "Chhole Pav",
+		subProducts: [
+			{
+				title: "VadaPav 1",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+			{
+				title: "VadaPav 2",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+		],
 	},
 
 	{
@@ -58,12 +186,44 @@ const productsData = [
 		image: "/products/Tea.jpg",
 		hoverDescription: "Tea",
 		Description: "Tea",
+		subProducts: [
+			{
+				title: "VadaPav 1",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+			{
+				title: "VadaPav 2",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+		],
 	},
 	{
 		title: "Hot Milk",
 		image: "/products/Milk.jpg",
 		hoverDescription: "Hot Milk",
 		Description: "Coffee",
+		subProducts: [
+			{
+				title: "VadaPav 1",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+			{
+				title: "VadaPav 2",
+				image: "/products/VadaPav.jpg",
+				hoverDescription:
+					"Vada is my spirit animal.",
+				Description: "Vada",
+			},
+		],
 	},
 
 	// Add more products as needed

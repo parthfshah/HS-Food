@@ -1,9 +1,49 @@
 import React, { useState } from "react"
-import "./ProductCard.css" // Import CSS for styling
-import { motion } from "framer-motion"
+import "./ProductCard.css"
+import { FaTimes } from "react-icons/fa" // Import the close icon
+
+import {
+	motion,
+	AnimatePresence,
+} from "framer-motion"
+
+const SubProductCard = ({
+	subProduct,
+	onClose,
+}) => {
+	return (
+		<AnimatePresence>
+			{subProduct && (
+				<motion.div
+					className="sub-product-modal"
+					initial={{ opacity: 0, scale: 0.8 }}
+					animate={{ opacity: 1, scale: 1 }}
+					exit={{ opacity: 0, scale: 0.8 }}
+				>
+					<button
+						className="close-button"
+						onClick={onClose}
+					>
+						<FaTimes />
+					</button>
+					<img
+						src={subProduct.image}
+						alt={subProduct.title}
+					/>
+					<div className="sub-product-content">
+						<h4>{subProduct.title}</h4>
+						<p>{subProduct.description}</p>
+					</div>
+				</motion.div>
+			)}
+		</AnimatePresence>
+	)
+}
 
 const ProductCard = ({ product }) => {
 	const [isHovered, setIsHovered] =
+		useState(false)
+	const [showSubProducts, setShowSubProducts] =
 		useState(false)
 
 	const handleMouseEnter = () => {
@@ -14,38 +54,11 @@ const ProductCard = ({ product }) => {
 		setIsHovered(false)
 	}
 
+	const handleClick = () => {
+		setShowSubProducts(!showSubProducts)
+	}
+
 	return (
-		// <motion.div
-		// 	className={`product-card ${
-		// 		isHovered ? "hovered" : ""
-		// 	}`}
-		// 	initial={{ opacity: 0 }}
-		// 	animate={{ opacity: 1 }}
-		// 	transition={{ duration: 5 }}
-		// 	onMouseEnter={handleMouseEnter}
-		// 	onMouseLeave={handleMouseLeave}
-		// >
-		// 	<div
-		// 		className={`product-card ${
-		// 			isHovered ? "hovered" : ""
-		// 		}`}
-		// 		onMouseEnter={handleMouseEnter}
-		// 		onMouseLeave={handleMouseLeave}
-		// 	>
-		// 		<img
-		// 			src={product.image}
-		// 			alt={product.title}
-		// 		/>
-		// 		<div className="card-content">
-		// 			<h3>{product.title}</h3>
-		// 			<p>
-		// 				{isHovered
-		// 					? product.hoverDescription
-		// 					: product.description}
-		// 			</p>
-		// 		</div>
-		// 	</div>
-		// </motion.div>
 		<motion.div
 			className={`product-card ${
 				isHovered ? "hovered" : ""
@@ -57,6 +70,7 @@ const ProductCard = ({ product }) => {
 			whileHover={{ scale: 1.05 }}
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
+			onClick={handleClick}
 		>
 			<motion.img
 				src={product.image}
@@ -88,6 +102,19 @@ const ProductCard = ({ product }) => {
 						: product.description}
 				</motion.p>
 			</motion.div>
+
+			{showSubProducts && (
+				<div className="sub-products-container">
+					{product.subProducts.map(
+						(subProduct, index) => (
+							<SubProductCard
+								key={index}
+								subProduct={subProduct}
+							/>
+						)
+					)}
+				</div>
+			)}
 		</motion.div>
 	)
 }
