@@ -33,7 +33,7 @@ const Menu = () => {
 
 			<Flex justify="center" align="center">
 				<Text fontSize="xl" mr={2}>
-					View on Google Docs:
+					View Menu in a new tab:
 				</Text>
 				<Link
 					href="https://docs.google.com/gview?url=hsfood.in/menu.pdf&embedded=true"
