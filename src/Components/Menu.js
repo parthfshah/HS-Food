@@ -29,18 +29,6 @@ const Menu = () => {
 					frameBorder="0"
 					scrolling="auto"
 				></iframe>
-				<Text mt={4} textAlign="center">
-					If you are unable to view the Menu, you
-					can{" "}
-					<Link
-						href="/menu.pdf"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						download the PDF file
-					</Link>
-					.
-				</Text>
 			</Box>
 
 			<Flex justify="center" align="center">

@@ -9,14 +9,14 @@ const productsData = [
 		subProducts: [
 			{
 				title: "VadaPav 1",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
 			},
 			{
 				title: "VadaPav 2",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
@@ -25,20 +25,20 @@ const productsData = [
 	},
 	{
 		title: "Vadapav",
-		image: "/products/Vadapav.jpg",
+		image: "/products/VadapavImage.jpg",
 		hoverDescription: "Ek Dum Mumbai Style",
 		Description: "Vadapav",
 		subProducts: [
 			{
 				title: "VadaPav 1",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
 			},
 			{
 				title: "VadaPav 2",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
@@ -53,14 +53,14 @@ const productsData = [
 		subProducts: [
 			{
 				title: "VadaPav 1",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
 			},
 			{
 				title: "VadaPav 2",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
@@ -76,14 +76,14 @@ const productsData = [
 		subProducts: [
 			{
 				title: "VadaPav 1",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
 			},
 			{
 				title: "VadaPav 2",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
@@ -98,14 +98,14 @@ const productsData = [
 		subProducts: [
 			{
 				title: "VadaPav 1",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
 			},
 			{
 				title: "VadaPav 2",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
@@ -121,14 +121,14 @@ const productsData = [
 		subProducts: [
 			{
 				title: "VadaPav 1",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
 			},
 			{
 				title: "VadaPav 2",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
@@ -144,14 +144,14 @@ const productsData = [
 		subProducts: [
 			{
 				title: "VadaPav 1",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
 			},
 			{
 				title: "VadaPav 2",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
@@ -166,14 +166,14 @@ const productsData = [
 		subProducts: [
 			{
 				title: "VadaPav 1",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
 			},
 			{
 				title: "VadaPav 2",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
@@ -189,14 +189,14 @@ const productsData = [
 		subProducts: [
 			{
 				title: "VadaPav 1",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
 			},
 			{
 				title: "VadaPav 2",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
@@ -211,14 +211,14 @@ const productsData = [
 		subProducts: [
 			{
 				title: "VadaPav 1",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
 			},
 			{
 				title: "VadaPav 2",
-				image: "/products/VadaPav.jpg",
+				image: "/products/VadapavImage.jpg",
 				hoverDescription:
 					"Vada is my spirit animal.",
 				Description: "Vada",
