@@ -62,7 +62,7 @@ const About = () => {
 			</Text>
 			<Divider />
 
-			<Text>
+			{/* <Text>
 				Call us at{" "}
 				<Link
 					color="blue.500"
@@ -79,7 +79,7 @@ const About = () => {
 				>
 					+91 - 9426170564
 				</Link>
-			</Text>
+			</Text> */}
 		</VStack>
 	)
 }

@@ -26,13 +26,9 @@ const SubProductCard = ({
 					>
 						<FaTimes />
 					</button>
-					<img
-						src={subProduct.image}
-						alt={subProduct.title}
-					/>
+
 					<div className="sub-product-content">
 						<h4>{subProduct.title}</h4>
-						<p>{subProduct.description}</p>
 					</div>
 				</motion.div>
 			)}
@@ -45,6 +41,10 @@ const ProductCard = ({ product }) => {
 		useState(false)
 	const [showSubProducts, setShowSubProducts] =
 		useState(false)
+	const [
+		showMainProductDescription,
+		setShowMainProductDescription,
+	] = useState(true)
 
 	const handleMouseEnter = () => {
 		setIsHovered(true)
@@ -56,6 +56,9 @@ const ProductCard = ({ product }) => {
 
 	const handleClick = () => {
 		setShowSubProducts(!showSubProducts)
+		setShowMainProductDescription(
+			!showMainProductDescription
+		)
 	}
 
 	return (
@@ -85,14 +88,24 @@ const ProductCard = ({ product }) => {
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.5 }}
 			>
-				<motion.h3
+				{/* <motion.h3
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
 				>
 					{product.title}
-				</motion.h3>
-				<motion.p
+				</motion.h3> */}
+				{showMainProductDescription && (
+					<motion.h3
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5 }}
+					>
+						{product.title}
+					</motion.h3>
+				)}
+
+				{/* <motion.p
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
@@ -100,7 +113,19 @@ const ProductCard = ({ product }) => {
 					{isHovered
 						? product.hoverDescription
 						: product.description}
-				</motion.p>
+				</motion.p> */}
+
+				{showMainProductDescription && (
+					<motion.p
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5 }}
+					>
+						{isHovered
+							? product.hoverDescription
+							: product.description}
+					</motion.p>
+				)}
 			</motion.div>
 
 			{showSubProducts && (
